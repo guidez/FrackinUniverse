@@ -19,7 +19,8 @@
             "mode" : "loop",
             "frameProperties" : {
               "immediateSound" : [ "", "/sfx/npc/monsters/batong_flap1.ogg", "", "", "", "/sfx/npc/monsters/batong_flap2.ogg", "", "" ]
-            }
+            },
+            "particleEmittersOff" : [ "flames" ]
           },
           "firewindup" : {
             "frames" : 4,
@@ -28,7 +29,8 @@
             "transition" : "winduploop",
             "frameProperties" : {
               "immediateSound" : [ "", "/sfx/npc/monsters/batong_flap1.ogg", "", "" ]
-            }
+            },
+            "particleEmittersOn" : [ "flames" ]
           },
           "winduploop" : {
             "frames" : 4,
@@ -39,13 +41,15 @@
             },
             "properties" : {
               "persistentSound" : "/sfx/npc/monsters/pteropod_windup.ogg"
-            }
+            },
+            "particleEmittersOn" : [ "flames" ]
           },
           "fire" : {
             "frames" : 4,
             "cycle" : 0.375,
             "mode" : "transition",
-            "transition" : "idle"
+            "transition" : "idle",
+            "particleEmittersOff" : [ "flames" ]
           }
         }
       },
@@ -147,17 +151,27 @@
   },
 
   "particleEmitters" : {
+    "flames" : {
+      "active" : false,
+      "emissionRate" : 24.0,
+      "offsetRegion" : [-0.75, -1.0, 0.75, 0.5],
+      "particles" : [
+        { "particle" : "teslaboltpurple" },
+        { "particle" : "electricswoosh1" },
+        { "particle" : "electricswoosh2" }
+      ]
+    },  
     "deathPoof" : {
       "particles" : [
         { "particle" : "monstersplosion" },
-        { "particle" : "poisondust" },
-        { "particle" : "poisondust" },
-        { "particle" : "poisondust" },
-        { "particle" : "poisonswoosh3" },
-        { "particle" : "poisonswoosh3" },
-        { "particle" : "poisonswoosh3" },
-        { "particle" : "poisonswoosh3" },
-        { "particle" : "poisonswoosh3" },
+        { "particle" : "teslaboltpurple" },
+        { "particle" : "teslaboltpurple" },
+        { "particle" : "teslaboltpurple" },
+        { "particle" : "electricswoosh2" },
+        { "particle" : "electricswoosh2" },
+        { "particle" : "electricswoosh2" },
+        { "particle" : "electricswoosh2" },
+        { "particle" : "electricswoosh2" },
         { "particle" : "deathember" },
         { "particle" : "deathember" },
         { "particle" : "deathember" },

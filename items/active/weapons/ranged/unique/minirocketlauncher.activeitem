@@ -4,11 +4,12 @@
   "inventoryIcon" : "minirocketlauncher.png",
   "maxStack" : 1,
   "rarity" : "rare",
-    "description" : "Fires adorable little missiles. ^#e43774;-Upgradeable-^reset;",
+  "description" : "Fires mini-missiles that enemies prefer to avoid...but can't!
+^yellow;Homing projectiles^reset;",
     "shortdescription" : "Micro-Rocket Launcher",
   "level" : 4,
   "category" : "^#e43774;Upgradeable Weapon^reset;", 
-  "tooltipKind" : "gun",
+  "tooltipKind" : "gun2",
   "weaponType" : "Rifle",
   "itemTags" : ["weapon","ranged","rocketlauncher"],
   "twoHanded" : true,
@@ -36,7 +37,7 @@
   "primaryAbility" : {
     "scripts" : ["/items/active/weapons/ranged/gunfire.lua"],
     "class" : "GunFire",
-    "fireTime" : 0.4,
+    "fireTime" : 0.35,
     "baseDps" : 4.8,
     "energyUsage" : 35.0,
     "inaccuracy" : 0.008,

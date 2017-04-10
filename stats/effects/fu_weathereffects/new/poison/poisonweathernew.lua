@@ -93,6 +93,7 @@ end
 
 function setWindPenalty()
   self.windLevel =  world.windLevel(mcontroller.position())
+  if not self.windLevel then self.windLevel = world.windLevel(mcontroller.position()) end
   if (self.windLevel > 1) then
     self.biomeThreshold = self.biomeThreshold + (self.windlevel / 100)
   end  
@@ -185,7 +186,7 @@ self.timerRadioMessage = self.timerRadioMessage - dt
   underground = undergroundCheck()
   local lightLevel = getLight() 
 
-      if status.stat("poisonResistance",0) < self.effectCutoffValue then  
+      if (status.stat("poisonResistance",0) <= self.effectCutoffValue) then  
         self.windLevel =  world.windLevel(mcontroller.position())
         activateVisualEffects()
         if self.windLevel >= 40 then
